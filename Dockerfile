@@ -5,7 +5,7 @@ ENV ENV TZ=America/Los_Angeles
 
 # install aws cli
 RUN apt-get update
-RUN apt-get install curl git unzip -y
+RUN apt-get install curl git unzip groff -y
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
@@ -18,4 +18,7 @@ RUN rm docker.tgz
 
 # install aws powershell module as well just in case you want to interface with aws that way instead.
 RUN pwsh -C 'install-module -name awspowershell.netcore -force'
+<<<<<<< HEAD
 COPY ./powershellProfile.ps1 /root/.config/powershell/Microsoft.PowerShell_profile.ps1
+=======
+>>>>>>> c5b27df454a2f51845323d28d135890914edeab9
