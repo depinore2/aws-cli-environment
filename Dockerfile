@@ -16,6 +16,4 @@ RUN curl "https://download.docker.com/linux/static/stable/x86_64/docker-18.03.1-
 RUN tar xzvf docker.tgz --strip 1 -C /usr/local/bin docker/docker;
 RUN rm docker.tgz
 
-# install aws powershell module as well just in case you want to interface with aws that way instead.
-RUN pwsh -C 'install-module -name awspowershell.netcore -force'
 COPY ./powershellProfile.ps1 /root/.config/powershell/Microsoft.PowerShell_profile.ps1

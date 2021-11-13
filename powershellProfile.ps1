@@ -1,1 +1,1 @@
-import-module awspowershell.netcore
+# if you need to add any functionality to run every time you open a new powershell terminal, add it here and rebuild your development container.
