@@ -18,7 +18,4 @@ RUN rm docker.tgz
 
 # install aws powershell module as well just in case you want to interface with aws that way instead.
 RUN pwsh -C 'install-module -name awspowershell.netcore -force'
-<<<<<<< HEAD
 COPY ./powershellProfile.ps1 /root/.config/powershell/Microsoft.PowerShell_profile.ps1
-=======
->>>>>>> c5b27df454a2f51845323d28d135890914edeab9
